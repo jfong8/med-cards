@@ -5,15 +5,15 @@ const app = express();
 // Get env. variables
 const dotenv = require('dotenv');
 dotenv.config();
-const PORT = process.env.PORT;
+const { PORT } = process.env;
 
 // Enable CORS
 const cors = require('cors');
 const corsOptions = {
-  origin:'*', 
-  credentials:true,
-  optionSuccessStatus:200,
-}
+  origin: '*',
+  credentials: true,
+  optionSuccessStatus: 200,
+};
 app.use(cors(corsOptions));
 
 // Middleware
