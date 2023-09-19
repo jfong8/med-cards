@@ -24,7 +24,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h2>Hello Home Component</h2>
+      <h2>Hello Team 109!</h2>
       <button type="button" onClick={handleButtonClick}>
         {!clicked ? <p>Call API</p> : <p>Clear Data</p>}
       </button>
