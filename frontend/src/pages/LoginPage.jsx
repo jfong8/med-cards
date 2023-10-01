@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   // Define state variables to store user input
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -9,13 +11,12 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform authentication here (e.g., check credentials)
+    // Perform authentication here (right now hard coded to username:cs, password:222)
     if (username === 'cs' && password === '222') {
-      alert('Login successful');
+      navigate('/');
     } else {
       alert('Login failed. Please check your credentials.');
     }
-
     // You can also redirect the user to a different page upon successful login
   };
 
