@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'; // import external CSS file
 
 function Login() {
   // Define state variables to store user input
@@ -28,7 +29,7 @@ function Login() {
           <label htmlFor="username">
             Username:
             <input
-              type="text"
+              type="username"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -38,7 +39,7 @@ function Login() {
         </div>
         <div>
           <label htmlFor="password">
-            Password   :
+            Password:
             <input
               type="password"
               id="password"
@@ -49,7 +50,7 @@ function Login() {
           </label>
         </div>
         <div>
-          <button type="submit">Login</button>
+          <button type="submit">Enter</button>
         </div>
       </form>
     </div>
