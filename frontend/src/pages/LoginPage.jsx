@@ -14,7 +14,7 @@ function Login() {
 
     // Perform authentication here (right now hard coded to username:cs, password:222)
     if (username === 'cs' && password === '222') {
-      navigate('/');
+      navigate('/carousel');
     } else {
       alert('Login failed. Please check your credentials.');
     }

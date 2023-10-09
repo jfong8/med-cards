@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
+import Carousel from './pages/Carousel';
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
             <Route
               path="/login"
               element={<Login />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/carousel"
+              element={<Carousel />}
             />
           </Routes>
         </div>
