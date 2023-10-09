@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './carousel.css';
+import './Carousel.css';
 import logo from '../reactlogo.png';
 import logo2 from '../reactlogo2.png';
 
@@ -25,7 +25,7 @@ function Carousel() {
   };
 
   return (
-    <div className="AppC">
+    <div className="app-c">
       <button
         type="button"
         className="nav-btn"

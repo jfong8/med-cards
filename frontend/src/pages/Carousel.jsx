@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 
-function App() {
+function Slider() {
   return (
     <div className="App">
       <h1>Learning HomePage</h1>
@@ -9,4 +9,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Slider;
