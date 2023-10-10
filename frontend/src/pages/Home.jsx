@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CardGrid from '../components/CardGrid';
 
 function Home() {
   const [data, setData] = useState(null);
@@ -29,6 +30,7 @@ function Home() {
         {!clicked ? <p>Call API</p> : <p>Clear Data</p>}
       </button>
       { data && <p>{data.cards}</p>}
+      <CardGrid />
     </div>
   );
 }
