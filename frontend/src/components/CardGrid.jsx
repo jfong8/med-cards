@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {
-  Grid, Card, CardActionArea, CardMedia, CardContent, Typography,
-} from '@mui/material';
+import Grid from '@mui/material/Grid';
 import { v4 as uuidv4 } from 'uuid';
-import CardComponent from './Card';
+import Card from './Card';
 
 const cardInfo = [
   {
@@ -31,33 +29,11 @@ function CardGrid() {
     <Grid container spacing={4} justifyContent="center">
       {cardInfo.map((card) => (
         <Grid item key={card.id}>
-          {/* This can be a good blueprint for our card component */}
-          <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardContent>
-                <CardMedia
-                  component="img"
-                  image={card.image}
-                />
-                <Typography gutterBottom variant="h5" component="div">
-                  {card.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {card.description}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          <Grid item>
-            {/* From the MUI Card API - https://mui.com/material-ui/react-card/#primary-action */}
-            {/* added the individual card component */}
-            <CardComponent
-              key={card.id}
-              name={card.name}
-              description={card.description}
-              image={card.image}
-            />
-          </Grid>
+          <Card
+            name={card.name}
+            description={card.description}
+            image={card.image}
+          />
         </Grid>
       ))}
     </Grid>
