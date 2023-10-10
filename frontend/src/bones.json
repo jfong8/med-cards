@@ -1,0 +1,53 @@
+{
+    "bones": [ 
+        {
+           "name": "Skull",
+           "image": "skull.png"
+        },
+        {
+            "name": "Vertebrae",
+            "image": "vertebrae.png"
+        },
+        {
+           "name": "Ribs",
+           "image": "ribs.png"
+        },
+        {
+           "name": "Clavicle",
+           "image": "clavicle.png"
+        },
+        {
+           "name": "Humerus",
+           "image": "humerus.png"
+        },
+        {
+           "name": "Raidus_Ulna",
+           "image": "radius_ulna.png"
+        },
+        {
+           "name": "Pelvis",
+           "image": "pelvis.png"
+        },
+        {
+           "name": "Femur",
+           "image": "femur.png"
+        },
+        {
+           "name": "Patella",
+           "image": "patella.png"
+        },
+        {
+           "name": "Tibia_Fibula",
+           "image": "tibia_fibula.png"
+        },
+        {
+           "name": "Phalanges",
+           "image": "phalanges.png"
+        },
+        {
+           "name": "Foot",
+           "image": "foot.png"
+        }
+    ]
+}
+
