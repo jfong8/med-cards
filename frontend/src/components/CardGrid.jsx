@@ -3,6 +3,7 @@ import {
   Grid, Card, CardActionArea, CardMedia, CardContent, Typography,
 } from '@mui/material';
 import { v4 as uuidv4 } from 'uuid';
+import CardComponent from './Card';
 
 const cardInfo = [
   {
@@ -28,32 +29,37 @@ const cardInfo = [
 function CardGrid() {
   return (
     <Grid container spacing={4} justifyContent="center">
-      {
-        cardInfo.map((card) => (
-          // ------------------------------------
-          // This can be a good blueprint for our card component
+      {cardInfo.map((card) => (
+        <Grid item key={card.id}>
+          {/* This can be a good blueprint for our card component */}
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardContent>
+                <CardMedia
+                  component="img"
+                  image={card.image}
+                />
+                <Typography gutterBottom variant="h5" component="div">
+                  {card.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {card.description}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
           <Grid item>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardContent>
-                  <CardMedia
-                    component="img"
-                    image={card.image}
-                  />
-                  <Typography gutterBottom variant="h5" component="div">
-                    {card.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {card.description}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+            {/* From the MUI Card API - https://mui.com/material-ui/react-card/#primary-action */}
+            {/* added the individual card component */}
+            <CardComponent
+              key={card.id}
+              name={card.name}
+              description={card.description}
+              image={card.image}
+            />
           </Grid>
-          // From the MUI Card API - https://mui.com/material-ui/react-card/#primary-action
-          // --------------------------------------
-        ))
-      }
+        </Grid>
+      ))}
     </Grid>
   );
 }

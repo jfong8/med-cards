@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
+import CardComponent from './components/Card';
 
 function App() {
   return (
@@ -27,6 +28,12 @@ function App() {
             <Route
               path="/carousel"
               element={<Carousel />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/cards"
+              element={<CardComponent />}
             />
           </Routes>
         </div>
