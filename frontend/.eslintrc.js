@@ -24,5 +24,7 @@ module.exports = {
   rules: {
     'import/no-extraneous-dependencies': 0,
     'no-alert': 0,
+    'import/no-dynamic-require': 0,
+    'global-require': 0,
   },
 };
