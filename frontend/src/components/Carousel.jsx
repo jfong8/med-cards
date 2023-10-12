@@ -14,6 +14,10 @@ function Carousel() {
       id: 2,
       source: logo2,
     },
+    {
+      id: 3,
+      source: logo,
+    },
   ];
 
   const previousImage = () => {
