@@ -1,11 +1,11 @@
 import React from 'react';
-import Carousel from '../components/Carousel';
+import CarouselComponent from '../components/Carousel';
 
 function Slider() {
   return (
     <div className="App">
       <h1>Learning HomePage</h1>
-      <Carousel />
+      <CarouselComponent />
     </div>
   );
 }
