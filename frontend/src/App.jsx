@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
 import CardComponent from './components/Card';
+import Register from './pages/RegisterUserPage';
 
 function App() {
   return (
@@ -34,6 +35,12 @@ function App() {
             <Route
               path="/cards"
               element={<CardComponent />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/register"
+              element={<Register />}
             />
           </Routes>
         </div>
