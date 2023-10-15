@@ -1,0 +1,75 @@
+[ 
+   {
+      "id": 1,
+      "name": "Skull",
+      "fileName": "skull.png",
+      "description": "A framework of bone or cartilage enclosing the brain of a vertebrate."
+   },
+   {
+      "id": 2,
+      "name": "Vertebrae",
+      "fileName": "vertebrae.png",
+      "description": "Each of the series of small bones forming the backbone, having several projections for articulation and muscle attachment, and a hole through which the spinal cord passes."
+   },
+   {
+      "id": 3,
+      "name": "Ribs",
+      "fileName": "ribs.png",
+      "description": "Each of a series of slender curved bones articulated in pairs to the spine (twelve pairs in humans), protecting the thoracic cavity and its organs."
+   },
+   {
+      "id": 4,
+      "name": "Collarbone",
+      "fileName": "clavicle.png",
+      "description": "Either of the pair of bones joining the breastbone to the shoulder blades."
+   },
+   {
+      "id": 5,
+      "name": "Humerus",
+      "fileName": "humerus.png",
+      "description": "The bone of the upper arm or forelimb, forming joints at the shoulder and the elbow."
+   },
+   {
+      "id": 6,
+      "name": "Radius Ulna",
+      "fileName": "radius_ulna.png",
+      "description": "The two bones that make up the forearm."
+   },
+   {
+      "id": 7,
+      "name": "Pelvis",
+      "fileName": "pelvis.png",
+      "description": "The large bony structure near the base of the spine to which the legs are attached in humans."
+   },
+   {
+      "id": 8,
+      "name": "Femur",
+      "fileName": "femur.png",
+      "description": "The bone of the thigh or upper hind limb, articulating at the hip and the knee."
+   },
+   {
+      "id": 9,
+      "name": "Patella",
+      "fileName": "patella.png",
+      "description": "The convex bone in front of the knee joint."
+   },
+   {
+      "id": 10,
+      "name": "Tibia_Fibula",
+      "fileName": "tibia_fibula.png",
+      "description": "The two bones that form the lower legs."
+   },
+   {
+      "id": 11,
+      "name": "Phalanges",
+      "fileName": "phalanges.png",
+      "description": "The bones of the fingers and of the toes."
+   },
+   {
+      "id": 12,
+      "name": "Foot",
+      "fileName": "foot.png",
+      "description": "The lower extremity of the leg below the ankle, on which a person stands or walks."
+   }
+]
+

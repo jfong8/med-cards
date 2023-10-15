@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import CardGrid from '../components/CardGrid';
 
 function Home() {
-  const [data, setData] = useState(null);
+  const [cardsData, setCardsData] = useState(undefined);
   const [clicked, setClicked] = useState(false);
 
-  async function getData() {
+  async function getCardsData() {
     const response = await fetch('http://localhost:4000/api/cards');
     if (response.status === 200) {
       const json = await response.json();
-      setData(json);
+      setCardsData(json);
     }
   }
 
   async function handleButtonClick() {
     if (!clicked) {
       setClicked(true);
-      getData();
+      getCardsData();
     } else {
       setClicked(false);
-      setData(null);
+      setCardsData(null);
     }
   }
 
@@ -29,8 +29,11 @@ function Home() {
       <button type="button" onClick={handleButtonClick}>
         {!clicked ? <p>Call API</p> : <p>Clear Data</p>}
       </button>
-      { data && <p>{data.cards}</p>}
-      <CardGrid />
+      { cardsData && (
+        <CardGrid
+          cardData={cardsData.cards}
+        />
+      )}
     </div>
   );
 }

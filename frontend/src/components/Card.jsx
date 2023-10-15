@@ -9,13 +9,14 @@ import PropTypes from 'prop-types';
 // Card component that takes in name, description, and image as properties
 function Card(props) {
   const { name, description, image } = props;
+
   return (
     <MUICard sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardContent>
           <CardMedia
             component="img"
-            image={image}
+            image={require('../assets/bone_images/'.concat(image))}
           />
           <Typography gutterBottom variant="h5" component="div">
             {name}
