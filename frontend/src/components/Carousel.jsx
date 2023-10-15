@@ -43,7 +43,6 @@ function Carousel() {
       >
         Prev
       </button>
-      {/* where each flashcard is located */}
       <div>
         <Card
           name={cardInfo[currentImageIndex].name}

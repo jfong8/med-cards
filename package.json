@@ -12,10 +12,5 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "dependencies": {
-    "@mui/icons-material": "^5.14.13",
-    "@mui/material": "^5.14.13",
-    "react-material-ui-carousel": "^3.4.2"
   }
 }
