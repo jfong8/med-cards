@@ -21,6 +21,10 @@ function Login() {
     // You can also redirect the user to a different page upon successful login
   };
 
+  const handleRegisterClick = () => {
+    navigate('/register');
+  };
+
   return (
     <div>
       <h2>Login</h2>
@@ -53,6 +57,9 @@ function Login() {
           <button type="submit">Enter</button>
         </div>
       </form>
+      <div className="button-container">
+        <button type="button" onClick={handleRegisterClick} className="register-button">Register</button>
+      </div>
     </div>
   );
 }
