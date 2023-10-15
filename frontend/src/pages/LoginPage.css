@@ -37,3 +37,19 @@
     text-align: center;
   }
   
+  .register-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .register-button:hover {
+    background-color: #56a8ff;;
+  }
+
+  .button-container {
+    margin-top: 10px;;
+  }
