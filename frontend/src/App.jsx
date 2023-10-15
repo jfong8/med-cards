@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
 import CardComponent from './components/Card';
-import Register from './pages/RegisterUserPage';
+import Register from './pages/Register';
 
 function App() {
   return (

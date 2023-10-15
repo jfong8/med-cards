@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './RegisterUserPage.css'; // import external CSS file
+import './Register.css'; // import external CSS file
 
 function Register() {
   // Define state variables to store user input
@@ -8,16 +8,11 @@ function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Perform authentication here (right now hard coded to username:cs, password:222)
-    if (username === 'cs' && password === '222') {
-      navigate('/carousel');
-    } else {
-      alert('Login failed. Please check your credentials.');
-    }
+    // performing routing for register page here
+    navigate('/carousel');
   };
 
   return (
