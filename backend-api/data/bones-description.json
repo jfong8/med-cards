@@ -1,0 +1,75 @@
+[ 
+   {
+      "id": 1,
+      "name": "Skull",
+      "fileName": "skull.png",
+      "description": "The skull is anterior to the spinal column and is the bony structure that encases the brain. Its purpose is to protect the brain and allow attachments for the facial muscles. The two regions of the skull are the cranial and facial region. The cranial portion is the part of the skull that directly houses the brain and the facial portion includes the rest of the bones of the skull."
+   },
+   {
+      "id": 2,
+      "name": "Vertebrae",
+      "fileName": "vertebrae.png",
+      "description": "The vertebral column supports the body’s physical structure and nervous system, enabling movement and sensation. Pathology of the spine can lead to debilitating outcomes on quality of life. The vertebral column (spine) defines the animal subphylum Vertebra, or vertebrates, of the phylum Chordata. In humans, it is composed of 33 vertebrae that include 7 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 4 coccygeal. Along with the skull, ribs, and sternum, these vertebrae make up the axial skeletal system."
+   },
+   {
+      "id": 3,
+      "name": "Ribs",
+      "fileName": "ribs.png",
+      "description": "The ribs are the bony framework of the thoracic cavity. Generally, there are twelve pairs of ribs. Each rib articulates posteriorly with two thoracic vertebrae; by the costovertebral joint. An exception to this rule is that the first rib articulates with the first thoracic vertebra only. The ribs can be classified as true, false, or floating ribs. True ribs are ribs that directly articulate with the sternum with their costal cartilages. The false ribs are the ribs that indirectly articulate with the sternum. The floating ribs are the ribs that do not articulate the sternum at all."
+   },
+   {
+      "id": 4,
+      "name": "Collarbone",
+      "fileName": "clavicle.png",
+      "description": "The clavicle is a sigmoid-shaped long bone with a convex surface along its medial end when observed from cephalad position. It serves as a connection between the axial and appendicular skeleton in conjunction with the scapula, and each of these structures forms the pectoral girdle.[1] Though not as large as other supporting structures in the body, clavicular attachments allow for significant function and range of motion of the upper extremity as well as protection of neurovascular structures posteriorly. Each part of this long bone has a purpose in regards to its attachments that affects the overall physiology of the pectoral girdle."
+   },
+   {
+      "id": 5,
+      "name": "Humerus",
+      "fileName": "humerus.png",
+      "description": "The humerus is the largest bone of the upper extremity and defines the human brachium (arm). It articulates proximally with the glenoid via the glenohumeral (GH) joint and distally with the radius and ulna at the elbow joint. The most proximal portion of the humerus is the head of the humerus, which forms a ball and socket joint with the glenoid cavity on the scapula.[1] Just inferior to the head of the humerus is the anatomical neck of the humerus, which divides the head of the humerus from the greater and lesser tubercles. The anatomical neck of the humerus is the residual epiphyseal plate. An intertubercular groove appears proximally, which demarcates the two tubercles vertically. Following the tubercles is the surgical neck of the humerus, a site commonly susceptible to fractures."
+   },
+   {
+      "id": 6,
+      "name": "Radius Ulna",
+      "fileName": "radius_ulna.png",
+      "description": "The radius is one of two long bones that make up the human antebrachium, the other bone being the ulna. The radius has three borders, three surfaces, and has a prismoid shape in which the base is broader than the anterior border. The radius articulates proximally at the elbow with the capitulum of the humerus and the radial notch of the ulna. It articulates at its distal end with the ulna at the ulnar notch and with the articular surfaces of the scaphoid and lunate carpal bones."
+   },
+   {
+      "id": 7,
+      "name": "Pelvis",
+      "fileName": "pelvis.png",
+      "description": ""
+   },
+   {
+      "id": 8,
+      "name": "Femur",
+      "fileName": "femur.png",
+      "description": ""
+   },
+   {
+      "id": 9,
+      "name": "Patella",
+      "fileName": "patella.png",
+      "description": ""
+   },
+   {
+      "id": 10,
+      "name": "Tibia_Fibula",
+      "fileName": "tibia_fibula.png",
+      "description": ""
+   },
+   {
+      "id": 11,
+      "name": "Phalanges",
+      "fileName": "phalanges.png",
+      "description": ""
+   },
+   {
+      "id": 12,
+      "name": "Foot",
+      "fileName": "foot.png",
+      "description": ""
+   }
+]
+
