@@ -1,14 +1,15 @@
-import * as React from 'react';
+import { React, useState } from 'react';
+import PropTypes from 'prop-types';
 import MUICard from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import PropTypes from 'prop-types';
+import Modal from './Modal';
 
 // Card component that takes in name, description, and image as properties
 function Card(props) {
   const { name, description, image } = props;
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <MUICard sx={{ maxWidth: 345 }}>
@@ -17,13 +18,14 @@ function Card(props) {
           <CardMedia
             component="img"
             image={require('../assets/bone_images/'.concat(image))}
+            onClick={() => setOpenModal(true)}
           />
-          <Typography gutterBottom variant="h5" component="div">
-            {name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
+          <Modal
+            open={openModal}
+            setOpen={setOpenModal}
+            name={name}
+            description={description}
+          />
         </CardContent>
       </CardActionArea>
     </MUICard>
