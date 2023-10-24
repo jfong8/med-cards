@@ -18,11 +18,10 @@ function Slider() {
     getCardsData();
   }, []);
 
-
   return (
     <div className="App">
       <h1>Learning HomePage</h1>
-      <button type="button" onClick={ () => navigate('/') }> Go to Grid View</button> 
+      <button type="button" onClick={() => navigate('/')}> Go to Grid View</button>
       {cardsData && (
       <Carousel
         cardData={cardsData.cards}
