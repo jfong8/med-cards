@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CardGrid from '../components/CardGrid';
 
 function Home() {
+  const navigate = useNavigate();
   const [cardsData, setCardsData] = useState(undefined);
   const [clicked, setClicked] = useState(false);
 
@@ -22,6 +24,7 @@ function Home() {
       setCardsData(null);
     }
   }
+  
 
   return (
     <div className="home">
@@ -29,6 +32,7 @@ function Home() {
       <button type="button" onClick={handleButtonClick}>
         {!clicked ? <p>Call API</p> : <p>Clear Data</p>}
       </button>
+      <button type="button" onClick={ () => navigate('/carousel') }> Go to Carousel View</button> 
       { cardsData && (
         <CardGrid
           cardData={cardsData.cards}

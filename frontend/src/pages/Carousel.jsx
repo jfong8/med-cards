@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Carousel from '../components/Carousel';
 
 function Slider() {
+  const navigate = useNavigate();
   const [cardsData, setCardsData] = useState(undefined);
 
   async function getCardsData() {
@@ -16,9 +18,11 @@ function Slider() {
     getCardsData();
   }, []);
 
+
   return (
     <div className="App">
       <h1>Learning HomePage</h1>
+      <button type="button" onClick={ () => navigate('/') }> Go to Grid View</button> 
       {cardsData && (
       <Carousel
         cardData={cardsData.cards}

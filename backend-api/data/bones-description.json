@@ -39,37 +39,37 @@
       "id": 7,
       "name": "Pelvis",
       "fileName": "pelvis.png",
-      "description": ""
+      "description": "The pelvis is a sturdy, bony structure located at the base of the spine, forming a protective ring around the lower abdominal organs. It consists of the ilium, ischium, and pubis bones, which fuse to provide stability and support for the body. The pelvis plays a crucial role in bearing the body's weight and facilitating movements of the legs and hips."
    },
    {
       "id": 8,
       "name": "Femur",
       "fileName": "femur.png",
-      "description": ""
+      "description": "The femur, also known as the thigh bone, is the longest and strongest bone in the human body. It connects the hip joint to the knee joint and is essential for both standing and walking. The femur's structure is well-suited to withstand the forces generated during weight-bearing activities."
    },
    {
       "id": 9,
       "name": "Patella",
       "fileName": "patella.png",
-      "description": ""
+      "description": "The patella, commonly referred to as the kneecap, is a small, flat, and triangular bone located in front of the knee joint. It acts as a protective shield for the knee and plays a vital role in enhancing the mechanical efficiency of the quadriceps muscles, which are responsible for extending the leg."
    },
    {
       "id": 10,
       "name": "Tibia_Fibula",
       "fileName": "tibia_fibula.png",
-      "description": ""
+      "description": "The tibia and fibula are two long bones in the lower leg. The tibia, also known as the shinbone, is the larger and weight-bearing bone, while the fibula is a thinner bone that runs alongside it. Together, they provide stability to the ankle joint and support the muscles involved in movements such as walking and running."
    },
    {
       "id": 11,
       "name": "Phalanges",
       "fileName": "phalanges.png",
-      "description": ""
+      "description": "Phalanges are the small bones that make up the fingers and toes. They are responsible for the intricate movements of these extremities and are crucial for tasks that require dexterity and fine motor skills, such as typing, gripping, and playing musical instruments."
    },
    {
       "id": 12,
       "name": "Foot",
       "fileName": "foot.png",
-      "description": ""
+      "description": "The foot is a complex anatomical structure comprising numerous bones, ligaments, and muscles that work together to support the body's weight and facilitate movement. The arches of the foot, including the longitudinal and transverse arches, provide shock absorption and stability. The foot is divided into three main parts: the hindfoot, midfoot, and forefoot, each with its specific bones and functions."
    }
 ]
 
