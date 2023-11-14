@@ -4,8 +4,8 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
-import CardComponent from './components/Card';
 import Register from './pages/Register';
+import Quiz from './components/Quiz';
 
 function App() {
   return (
@@ -33,14 +33,14 @@ function App() {
           </Routes>
           <Routes>
             <Route
-              path="/cards"
-              element={<CardComponent />}
+              path="/register"
+              element={<Register />}
             />
           </Routes>
           <Routes>
             <Route
-              path="/register"
-              element={<Register />}
+              path="/quiz"
+              element={<Quiz />}
             />
           </Routes>
         </div>

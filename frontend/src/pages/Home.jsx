@@ -32,6 +32,7 @@ function Home() {
         {!clicked ? <p>Call API</p> : <p>Clear Data</p>}
       </button>
       <button type="button" onClick={() => navigate('/carousel')}> Go to Carousel View</button>
+      <button type="button" onClick={() => navigate('/quiz')}> Go to Quiz</button>
       { cardsData && (
         <CardGrid
           cardData={cardsData.cards}
