@@ -1,0 +1,39 @@
+.fillblank-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .fillblank-title {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .fillblank-question {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .fillblank-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .fillblank-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .fillblank-result {
+    margin: 20px 0;
+    font-size: 18px;
+  }

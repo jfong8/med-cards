@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
 import Register from './pages/Register';
+import FillBlank from './components/FillBlank';
 import MultipleChoice from './pages/MultipleChoice';
 import Quiz from './components/Quiz';
 
@@ -48,6 +49,12 @@ function App() {
             <Route
               path="/mc"
               element={<MultipleChoice />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/fillblank"
+              element={<FillBlank />}
             />
           </Routes>
         </div>
