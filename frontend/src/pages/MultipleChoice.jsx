@@ -54,11 +54,11 @@ function MultipleChoiceQuiz() {
     <div>
       <h1>Multiple Choice Quiz</h1>
       <form onSubmit={handleSubmit}>
-        {questions.map((question, index) => (
-          <div key={index}>
+        {questions.map((question) => (
+          <div>
             <p>{question.question}</p>
-            {question.options.map((option, optionIndex) => (
-              <label key={optionIndex}>
+            {question.options.map((option) => (
+              <label htmlFor="radio">
                 <input
                   type="radio"
                   name={question.question}
