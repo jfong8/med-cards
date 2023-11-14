@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/LoginPage';
 import Carousel from './pages/Carousel';
 import Register from './pages/Register';
+import MultipleChoice from './pages/MultipleChoice';
 import Quiz from './components/Quiz';
 
 function App() {
@@ -41,6 +42,12 @@ function App() {
             <Route
               path="/quiz"
               element={<Quiz />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/mc"
+              element={<MultipleChoice />}
             />
           </Routes>
         </div>
