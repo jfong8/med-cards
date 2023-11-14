@@ -7,7 +7,8 @@ import Carousel from './pages/Carousel';
 import Register from './pages/Register';
 import FillBlank from './components/FillBlank';
 import MultipleChoice from './pages/MultipleChoice';
-import Quiz from './components/Quiz';
+import QuizPage from './pages/QuizPage';
+import TrueFalse from './components/TrueFalse';
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
           <Routes>
             <Route
               path="/quiz"
-              element={<Quiz />}
+              element={<QuizPage />}
             />
           </Routes>
           <Routes>
@@ -55,6 +56,12 @@ function App() {
             <Route
               path="/fillblank"
               element={<FillBlank />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path="/truefalse"
+              element={<TrueFalse />}
             />
           </Routes>
         </div>
