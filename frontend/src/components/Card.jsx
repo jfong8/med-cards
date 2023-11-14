@@ -12,7 +12,7 @@ function Card(props) {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <MUICard sx={{ maxWidth: 345 }}>
+    <MUICard sx={{ maxWidth: 345, border: '2px solid black' }}>
       <CardActionArea>
         <CardContent>
           <CardMedia

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Carousel.css';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import PropTypes from 'prop-types';
 import Card from './Card';
 
@@ -17,13 +20,14 @@ function Carousel(props) {
 
   return (
     <div className="app-c">
-      <button
+      <IconButton
         type="button"
         className="nav-btn"
         onClick={previousImage}
+        sx={{ backgroundColor: 'grey', borderRadius: 0 }}
       >
-        Prev
-      </button>
+        <ArrowBackIcon />
+      </IconButton>
       <div>
         <Card
           name={cardData[currentImageIndex].name}
@@ -31,13 +35,14 @@ function Carousel(props) {
           image={cardData[currentImageIndex].fileName}
         />
       </div>
-      <button
+      <IconButton
         type="button"
         className="nav-btn"
         onClick={nextImage}
+        sx={{ backgroundColor: 'grey', borderRadius: 0 }}
       >
-        Next
-      </button>
+        <ArrowForwardIcon />
+      </IconButton>
     </div>
   );
 }
