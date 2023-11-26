@@ -9,6 +9,23 @@
     margin-bottom: 10px;
     color: #000000;
   }
+
+  .form {
+    margin-top: 100px;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-field {
+    width: 350px;
+    min-width: 30%;
+  }
   
   input[type="username"],
   input[type="password"] {
@@ -19,37 +36,33 @@
     border-radius: 5px; /* rounded corners */
   }
   
-  /*this is for the submit button */
-  button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
   /*this is for the error message */
   .error-message {
     color: red;
     text-align: center;
   }
+
+  .confirmation-message {
+    color: green;
+    text-align: center;
+  }
   
-  .register-button {
+  .button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    margin-right: 20px;
   }
 
-  .register-button:hover {
+  .button:hover {
     background-color: #56a8ff;;
   }
 
   .button-container {
-    margin-top: 10px;;
+    display: flex;
+    margin-top: 10px;
   }
+  

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
@@ -9,41 +9,43 @@ import FillBlank from './components/FillBlank';
 import MultipleChoice from './pages/MultipleChoice';
 import QuizPage from './pages/QuizPage';
 import TrueFalse from './components/TrueFalse';
+import { UserContext } from './contexts/UserContext';
 
 function App() {
+  const { username } = useContext(UserContext);
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        {username && <Navbar />}
         <div className="pages">
           <Routes>
             <Route
               path="/"
-              element={<Home />}
+              element={username ? <Home /> : <Login />}
             />
           </Routes>
           <Routes>
             <Route
               path="/login"
-              element={<Login />}
+              element={username ? <Home /> : <Login />}
             />
           </Routes>
           <Routes>
             <Route
               path="/carousel"
-              element={<Carousel />}
+              element={username ? <Carousel /> : <Login />}
             />
           </Routes>
           <Routes>
             <Route
               path="/register"
-              element={<Register />}
+              element={username ? <Home /> : <Register />}
             />
           </Routes>
           <Routes>
             <Route
               path="/quiz"
-              element={<QuizPage />}
+              element={username ? <QuizPage /> : <Login />}
             />
           </Routes>
           <Routes>

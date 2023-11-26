@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginPage.css'; // import external CSS file
+import { UserContext } from '../contexts/UserContext';
+import './AuthPage.css'; // import external CSS file
 
 function Login() {
-  // Define state variables to store user input
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(undefined);
+  const { dispatch } = useContext(UserContext);
 
   // Function to handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Perform authentication here (right now hard coded to username:cs, password:222)
-    if (username === 'cs' && password === '222') {
-      navigate('/carousel');
+    const response = await fetch('http://localhost:4000/api/users/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.status === 200) {
+      const json = await response.json();
+      localStorage.setItem('user', JSON.stringify(json));
+      dispatch({ type: 'LOGIN', payload: json });
     } else {
-      alert('Login failed. Please check your credentials.');
+      const errorMessage = await response.text();
+      setError(errorMessage);
     }
-    // You can also redirect the user to a different page upon successful login
   };
 
   const handleRegisterClick = () => {
@@ -26,12 +36,13 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="form">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-field">
           <label htmlFor="username">
             Username:
+            <br />
             <input
               type="username"
               id="username"
@@ -41,9 +52,10 @@ function Login() {
             />
           </label>
         </div>
-        <div>
+        <div className="form-field">
           <label htmlFor="password">
             Password:
+            <br />
             <input
               type="password"
               id="password"
@@ -53,13 +65,12 @@ function Login() {
             />
           </label>
         </div>
-        <div>
-          <button type="submit">Enter</button>
+        { error && <p className="error-message">{error}</p> }
+        <div className="button-container">
+          <button type="submit" className="button">Login</button>
+          <button type="button" onClick={handleRegisterClick} className="button">Register</button>
         </div>
       </form>
-      <div className="button-container">
-        <button type="button" onClick={handleRegisterClick} className="register-button">Register</button>
-      </div>
     </div>
   );
 }

@@ -1,27 +1,46 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Register.css'; // import external CSS file
+import './AuthPage.css'; // import external CSS file
 
 function Register() {
-  // Define state variables to store user input
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(undefined);
+  const [confirmation, setConfirmation] = useState(undefined);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // performing routing for register page here
-    navigate('/carousel');
+    const response = await fetch('http://localhost:4000/api/users', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.status === 201) {
+      setError(undefined);
+      setConfirmation('User successfully created');
+    } else {
+      const errorMessage = await response.text();
+      setConfirmation(undefined);
+      setError(errorMessage);
+    }
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login');
   };
 
   return (
-    <div>
+    <div className="form">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-field">
           <label htmlFor="username">
             Username:
+            <br />
             <input
               type="username"
               id="username"
@@ -31,9 +50,10 @@ function Register() {
             />
           </label>
         </div>
-        <div>
+        <div className="form-field">
           <label htmlFor="password">
-            Password:
+            Password
+            <br />
             <input
               type="password"
               id="password"
@@ -43,8 +63,11 @@ function Register() {
             />
           </label>
         </div>
-        <div>
-          <button type="submit">Register</button>
+        { error && <p className="error-message">{error}</p> }
+        { confirmation && <p className="confirmation-message">{confirmation}</p> }
+        <div className="button-container">
+          <button type="submit" className="button">Register</button>
+          <button type="button" onClick={handleLoginClick} className="button">Login</button>
         </div>
       </form>
     </div>

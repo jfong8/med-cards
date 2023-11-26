@@ -8,7 +8,13 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState('');
 
   async function getCardsData() {
-    const response = await fetch('http://localhost:4000/api/cards');
+    const { token } = JSON.parse(localStorage.getItem('user'));
+    const response = await fetch('http://localhost:4000/api/cards', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
     if (response.status === 200) {
       const json = await response.json();
       setCardsData(json.cards);
