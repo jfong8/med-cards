@@ -26,7 +26,7 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    if (searchTerm !== '') {
+    if (searchTerm !== '' && cardsData) {
       // eslint-disable-next-line arrow-body-style
       const filtered = cardsData.filter((card) => {
         return card.name.toLowerCase().includes(searchTerm.toLowerCase())
