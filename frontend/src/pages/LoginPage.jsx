@@ -25,6 +25,7 @@ function Login() {
       const json = await response.json();
       localStorage.setItem('user', JSON.stringify(json));
       dispatch({ type: 'LOGIN', payload: json });
+      navigate('/');
     } else {
       const errorMessage = await response.text();
       setError(errorMessage);

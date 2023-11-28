@@ -51,19 +51,19 @@ function App() {
           <Routes>
             <Route
               path="/mc"
-              element={<MultipleChoice />}
+              element={username ? <MultipleChoice /> : <Login />}
             />
           </Routes>
           <Routes>
             <Route
               path="/fillblank"
-              element={<FillBlank />}
+              element={username ? <FillBlank /> : <Login />}
             />
           </Routes>
           <Routes>
             <Route
               path="/truefalse"
-              element={<TrueFalse />}
+              element={username ? <TrueFalse /> : <Login />}
             />
           </Routes>
         </div>

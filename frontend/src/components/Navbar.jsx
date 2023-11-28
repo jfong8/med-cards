@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Button, Grid, Link, Container, Typography,
 } from '@mui/material';
@@ -6,10 +7,12 @@ import { UserContext } from '../contexts/UserContext';
 
 function Navbar() {
   const { username, dispatch } = useContext(UserContext);
+  const navigate = useNavigate();
 
   function logout() {
     localStorage.removeItem('user');
     dispatch({ type: 'LOGOUT' });
+    navigate('/');
   }
 
   return (
