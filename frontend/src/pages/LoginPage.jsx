@@ -69,7 +69,7 @@ function Login() {
         { error && <p className="error-message">{error}</p> }
         <div className="button-container">
           <button type="submit" className="button">Login</button>
-          <button type="button" onClick={handleRegisterClick} className="button">Register</button>
+          <button type="button" style={{ backgroundColor: 'gray' }} onClick={handleRegisterClick} className="button">Register</button>
         </div>
       </form>
     </div>

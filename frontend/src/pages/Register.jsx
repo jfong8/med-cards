@@ -67,7 +67,7 @@ function Register() {
         { confirmation && <p className="confirmation-message">{confirmation}</p> }
         <div className="button-container">
           <button type="submit" className="button">Register</button>
-          <button type="button" onClick={handleLoginClick} className="button">Login</button>
+          <button type="button" style={{ backgroundColor: 'gray' }} onClick={handleLoginClick} className="button">Login</button>
         </div>
       </form>
     </div>

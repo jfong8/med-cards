@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
   try {
     authService.createUser({ username: req.body.username, password: req.body.password });
     res.sendStatus(201);
-  } catch {
+  } catch (error) {
+    console.log(error);
     res.sendStatus(500);
   }
 });
@@ -36,7 +37,8 @@ router.post('/login', async (req, res) => {
     } else {
       res.status(400).send('Invalid username or password');
     }
-  } catch {
+  } catch (error) {
+    console.log(error);
     res.sendStatus(500);
   }
 });

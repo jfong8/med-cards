@@ -1,11 +1,15 @@
 // Init Express App
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 
 // Get env. variables
 const dotenv = require('dotenv');
 dotenv.config();
-const { PORT } = process.env;
+const { PORT, DB_CONN_STRING } = process.env;
+
+// DB connection
+mongoose.connect(DB_CONN_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Enable CORS
 const cors = require('cors');
