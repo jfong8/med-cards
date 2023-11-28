@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const UserAuth = require('../models/userAuth');
 
 async function userExists(username) {
-  return !!UserAuth.findOne({ username });
+  return UserAuth.findOne({ username });
 }
 
 async function createUser(user) {
@@ -24,4 +24,10 @@ async function checkLoginAndReturnUser(user) {
   return Promise.resolve(undefined);
 }
 
-module.exports = { userExists, createUser, checkLoginAndReturnUser };
+async function clearCollection() {
+  await UserAuth.deleteMany({});
+}
+
+module.exports = {
+  userExists, createUser, checkLoginAndReturnUser, clearCollection,
+};

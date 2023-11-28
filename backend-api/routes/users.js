@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
     res.status(400).send('Missing username or password');
     return;
   }
-  if (authService.userExists(req.body.username)) {
+  if (await authService.userExists(req.body.username)) {
     res.status(400).send('Username already in use');
     return;
   }
@@ -41,6 +41,11 @@ router.post('/login', async (req, res) => {
     console.log(error);
     res.sendStatus(500);
   }
+});
+
+router.delete('/', async (req, res) => {
+  await authService.clearCollection();
+  res.status(200).send('UserAuth collection cleared');
 });
 
 module.exports = router;
