@@ -51,7 +51,7 @@ function MultipleChoiceQuiz() {
   };
 
   return (
-    <div>
+    <div style={{ marginLeft: '40px' }}>
       <h1>Multiple Choice Quiz</h1>
       <form onSubmit={handleSubmit}>
         {questions.map((question) => (
