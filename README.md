@@ -53,13 +53,9 @@ While there are similar existing softwares that exist such as Quizlet, MedCards 
 #### Technical Architecture:
 The front end allows the user to interact with the application and displays visually the information stored in the back end. When logging in, the front end sends CRUD requests to the back end. Registering users are posted to the database and users trying to login are compared to the existing users in the database .The role of our database is to store user information and prevent duplicate usernames. Once the user is logged in, the home page sends a GET request to the back end to acquire all the card data and populate the front end. User interaction with the application is also handled in the back end, such as when taking the quiz and going through the carousel component. 
 
-The front end is in javascript and we also utilized the Mui component library. For authentication we used ??? and . For the backend we are using React JS because it is lightweight and able to handle logic. 
+The front end is in javascript and we also utilized the Mui component library. For authentication we used JWT. For the backend we are using React JS because it is lightweight and able to handle logic. 
 
 We all worked on the frontend, but mainly Jacob and Sofia focused on that component of development and Telman worked on the authentication. Jessie and Telmen also worked on the backend and database integration. 
-
-
-#### Reproducible Installation Instructions:
- *** UPDATE LATER WITH TELMEN HELP
 
 
 #### Group Members and Their Roles:
