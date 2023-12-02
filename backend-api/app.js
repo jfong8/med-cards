@@ -3,13 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
-// Get env. variables
-const dotenv = require('dotenv');
-dotenv.config();
-const { PORT, DB_CONN_STRING } = process.env;
+process.env.ACCESS_TOKEN_SECRET = '12345';
 
 // DB connection
-mongoose.connect(DB_CONN_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
+const DB_CONN_STRING = 'mongodb+srv://jessiew4:GUiEjVt3FkEm82S@cluster0.aawubv7.mongodb.net/'
+mongoose.connect(DB_CONN_STRING);
 
 // Enable CORS
 const cors = require('cors');
@@ -32,6 +30,7 @@ app.use('/api/cards', require('./routes/cards'));
 app.use('/api/users', require('./routes/users'));
 
 // Listen
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
