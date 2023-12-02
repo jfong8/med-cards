@@ -47,7 +47,7 @@ The front end allows the user to interact with the application and displays visu
 
 The front end is in javascript and we also utilized the Mui component library. For authentication we used JWT. For the backend we are using React JS because it is lightweight and able to handle logic. 
 
-We all worked on the frontend, but mainly Jacob and Sofia focused on that component of development and Telman worked on the authentication. Jessie and Telmen also worked on the backend and database integration. 
+We all worked on the frontend, but mainly Jacob and Sofia focused on that component of development and Telmen worked on the authentication. Jessie and Telmen also worked on the backend and database integration. 
 
 
 #### Group Members and Their Roles:
